@@ -24,7 +24,7 @@ else:
     print(f"Size is unavailable - {requested_size}")
 
 
-# Infinite Loop 
+# Infinite Loop
 
 flavors = ["masala", "ginger", "lemon", "mint"]
 

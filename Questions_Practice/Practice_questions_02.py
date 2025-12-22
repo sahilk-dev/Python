@@ -50,3 +50,43 @@ final_price = total_amount - discount_amount
 
 print(f"You got a discount of {discount}%")
 print(f"The final price after a {discount}% discount is: ${final_price}")
+
+# Website Login Attempts
+
+correct_password = "Sahil123"
+attempts = 3
+
+while attempts > 0:
+    user_input = input("Enter the Password: ")
+
+    if user_input == correct_password:
+        print("Login Successful")
+        break
+    else:
+        attempts -= 1
+        print(f"Wrong Password. Attempts left: {attempts}")
+
+if attempts == 0:
+    print("Account Blocked")
+
+
+# Temperature Monitor
+
+tempretures = [28, 46, 50, 36, 18, 10]
+
+highest = tempretures[0]
+lowest = tempretures[0]
+total = 0
+
+for temp in tempretures:
+    if temp > highest:
+        highest = temp
+    if temp < lowest:
+        lowest = temp
+    total += temp
+
+average = total / len(tempretures)
+
+print(f"Highest tempreture: {highest}°C")
+print(f"Lowest tempreture: {lowest}°C")
+print(f"Average temperature: {average:.2f}°C")

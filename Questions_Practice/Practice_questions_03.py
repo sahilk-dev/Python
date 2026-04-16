@@ -54,4 +54,35 @@ def analyze_scores(scores):
     }
 
 scores = [95, 82, 67, 45, 74, 88, 91]
-print(analyze_scores(scores))       
+print(analyze_scores(scores))
+
+
+# Smart Even-Odd Analyzer
+
+def smart_analyzer(integers):
+    
+    even_count = 0
+    odd_count = 0
+
+    even_sum = 0
+    odd_sum = 0
+
+    for num in integers:
+
+        if not isinstance(num, int):
+            return {"error": "All elements must be integers"}
+
+        if num % 2 == 0:
+            even_count += 1
+            even_sum += num
+        else:
+            odd_count += 1
+            odd_sum += num
+
+    return {
+        "even": {"count": even_count, "sum": even_sum},
+        "odd": {"count": odd_count, "sum": odd_sum}
+    }
+
+integers = [2, 4, 10, 7, 9, 50, 99 ]
+print(smart_analyzer(integers))
